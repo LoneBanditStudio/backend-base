@@ -100,7 +100,7 @@ async function joinSecondPlayer() {
 }
 
 // Example usage
-const depositAmount = ethers.utils.parseEther('1.0'); // Assuming deposit is in ETH
+const depositAmount = ethers.utils.parseEther('1.0'); // Assuming deposit is in ETH/
 
 export const joingame = joinGame();
 export const joinsecondplayer = joinSecondPlayer();

@@ -1,6 +1,7 @@
 import { WebSocket } from "ws";
 import { INIT_GAME, MOVE } from "./messages";
 import { Game } from "./Game";
+import { joingame, joinsecondplayer } from "./Web3";
 
 
 export class GameManager {
@@ -38,8 +39,10 @@ export class GameManager {
                     const game = new Game(this.pendingUser, socket); // Create a new Game instance with players
                     this.games.push(game); // Add game to games array
                     this.pendingUser = null; // Reset pendingUser
+                    joinsecondplayer
                 } else {
                     this.pendingUser = socket; // Set pendingUser as the current socket
+                    joingame
                 }
             }
 
